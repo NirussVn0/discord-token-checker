@@ -1,0 +1,78 @@
+{
+  "name": "discord-token-checker",
+  "version": "1.0.0",
+  "description": "A comprehensive Discord token validation and verification tool",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "discord-token-checker": "dist/cli.js",
+    "dtc": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepublishOnly": "npm run build",
+    "verify-env": "node dist/cli.js verify-env",
+    "check-api": "node dist/cli.js check-api",
+    "test-direct": "node dist/cli.js test-direct"
+  },
+  "keywords": [
+    "discord",
+    "token",
+    "validation",
+    "verification",
+    "api",
+    "selfbot",
+    "checker",
+    "cli"
+  ],
+  "author": "Discord Bot Developer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/discord-token-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/discord-token-checker/issues"
+  },
+  "homepage": "https://github.com/your-username/discord-token-checker#readme",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "eslint": "^9.29.0",
+    "jest": "^30.0.0",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "dotenv": "^16.5.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.d.ts",
+      "!src/cli.ts"
+    ]
+  }
+}
