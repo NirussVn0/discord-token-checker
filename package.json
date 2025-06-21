@@ -31,16 +31,6 @@
     "checker",
     "cli"
   ],
-  "author": "Discord Bot Developer",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/discord-token-checker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/your-username/discord-token-checker/issues"
-  },
-  "homepage": "https://github.com/your-username/discord-token-checker#readme",
   "files": [
     "dist/**/*",
     "README.md",
