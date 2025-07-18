@@ -1,11 +1,11 @@
 {
-  "name": "discord-token-checker",
-  "version": "1.0.0",
+  "name": "token-discord-checker",
+  "version": "1.1.0",
   "description": "A comprehensive Discord token validation and verification tool",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "discord-token-checker": "dist/cli.js",
+    "token-discord-checker": "dist/cli.js",
     "dtc": "dist/cli.js"
   },
   "scripts": {

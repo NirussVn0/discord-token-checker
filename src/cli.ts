@@ -21,7 +21,7 @@ class TokenCheckerCLI {
 
   private setupCommands(): void {
     program
-      .name('discord-token-checker')
+      .name('token-discord-checker')
       .description('Discord token validation and verification tool')
       .version('1.0.0');
 

@@ -8,15 +8,16 @@ Main class for token validation.
 
 ```typescript
 const checker = new DiscordTokenChecker({
-  checkApi: true,           // Perform API validation
-  timeout: 10000,          // Request timeout in ms
-  includeUserInfo: true,   // Include user info in results
-  validateFormat: true,    // Validate token format
-  userAgent: 'Custom/1.0', // Custom user agent
+  checkApi: true, // Perform API validation
+  timeout: 10000, // Request timeout in ms
+  includeUserInfo: true, // Include user info in results
+  validateFormat: true, // Validate token format
+  userAgent: "Custom/1.0", // Custom user agent
 });
 ```
 
 #### Methods
+
 - `validateFromEnv(options)` - Validate token from environment
 - `validateFromFile(options)` - Validate token from file
 - `validateDirect(token, method)` - Validate token directly
@@ -24,6 +25,7 @@ const checker = new DiscordTokenChecker({
 - `getConfig()` - Get current configuration
 
 #### Static Methods
+
 - `quickFormatCheck(token)` - Quick format validation
 - `quickApiCheck(token, timeout)` - Quick API validation
 - `extractUserId(token)` - Extract user ID from token
@@ -33,6 +35,7 @@ const checker = new DiscordTokenChecker({
 ## Types
 
 ### Validation Results
+
 ```typescript
 interface TokenValidationResult {
   isValid: boolean;
@@ -53,12 +56,13 @@ interface TokenValidationResult {
   metadata: {
     length: number;
     parts: number;
-    source: 'env' | 'file' | 'direct';
+    source: "env" | "file" | "direct";
   };
 }
 ```
 
 ### User Information
+
 ```typescript
 interface DiscordUserInfo {
   id: string;
@@ -78,10 +82,11 @@ interface DiscordUserInfo {
 ## CLI Commands
 
 ### `verify-env`
+
 Verify Discord token from .env file.
 
 ```bash
-discord-token-checker verify-env [options]
+token-discord-checker verify-env [options]
 
 Options:
   -p, --path <path>     Path to .env file (default: ".env")
@@ -91,10 +96,11 @@ Options:
 ```
 
 ### `check-api`
+
 Check token with Discord API from file.
 
 ```bash
-discord-token-checker check-api [options]
+token-discord-checker check-api [options]
 
 Options:
   -f, --file <path>    Token file path (default: "input.txt")
@@ -104,10 +110,11 @@ Options:
 ```
 
 ### `test-direct`
+
 Test token directly.
 
 ```bash
-discord-token-checker test-direct <token> [options]
+token-discord-checker test-direct <token> [options]
 
 Options:
   --format-only       Only validate format, skip API
@@ -116,15 +123,17 @@ Options:
 ```
 
 ### `quick`
+
 Quick token format check.
 
 ```bash
-discord-token-checker quick <token>
+token-discord-checker quick <token>
 ```
 
 ### `extract`
+
 Extract information from token.
 
 ```bash
-discord-token-checker extract <token>
+token-discord-checker extract <token>
 ```

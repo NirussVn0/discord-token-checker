@@ -3,6 +3,7 @@
 A simple, fast Discord token validation tool for Node.js and CLI.
 
 ## 🚀 Features & Security
+
 - **Format & API Validation**: Checks structure, length, and verifies with Discord API
 - **User Info Extraction**: Get user details from valid tokens
 - **No Token Logging**: No storage, secure HTTPS requests
@@ -14,33 +15,35 @@ A simple, fast Discord token validation tool for Node.js and CLI.
 ## 📦 Install
 
 ```bash
-npm install discord-token-checker # as a package
-npm install -g discord-token-checker # as a CLI
+npm install token-discord-checker # as a package
+npm install -g token-discord-checker # as a CLI
 ```
 
 ## ⚡ Quick Usage
 
 ### Node.js
+
 ```js
-const { DiscordTokenChecker, createChecker } = require('discord-token-checker');
+const { DiscordTokenChecker, createChecker } = require("token-discord-checker");
 
 // Quick format check
-DiscordTokenChecker.quickFormatCheck('your_token_here');
+DiscordTokenChecker.quickFormatCheck("your_token_here");
 
 // Quick API check (async)
-await DiscordTokenChecker.quickApiCheck('your_token_here');
+await DiscordTokenChecker.quickApiCheck("your_token_here");
 
 // Full validation
 const checker = createChecker();
-const result = await checker.validateDirect('your_token_here');
+const result = await checker.validateDirect("your_token_here");
 console.log(result.isValid);
 ```
 
 ### CLI
-```bash
-discord-token-checker quick "your_token_here"
-discord-token-checker test-direct "your_token_here"
-discord-token-checker verify-env
+
+```
+token-discord-checker quick "your_token_here"
+token-discord-checker test-direct "your_token_here"
+token-discord-checker verify-env
 ```
 
 For more, see [API Documentation](docs/API.md).
@@ -48,8 +51,8 @@ For more, see [API Documentation](docs/API.md).
 ## 🛠️ Development
 
 ```bash
-git clone https://github.com/NirussVn0/discord-token-checker.git
-cd discord-token-checker
+git clone https://github.com/NirussVn0/token-discord-checker.git
+cd token-discord-checker
 npm install
 npm run build
 ```
@@ -65,9 +68,11 @@ npm test
 MIT License - see [LICENSE](LICENSE) file for details.
 
 # 🤝 Contribute
+
 Contributions are welcome! Please:
-- **Fork this repo on GitHub:** [Fork via GitHub](https://github.com/NirussVn0/discord-token-checker/fork)
-- **Repository URL:** [https://github.com/NirussVn0/discord-token-checker](https://github.com/NirussVn0/discord-token-checker)
+
+- **Fork this repo on GitHub:** [Fork via GitHub](https://github.com/NirussVn0/token-discord-checker/fork)
+- **Repository URL:** [https://github.com/NirussVn0/token-discord-checker](https://github.com/NirussVn0/token-discord-checker)
 - **Create a feature branch, add tests, and submit a pull request!**
 
 # 📞 Support
@@ -77,4 +82,5 @@ Contributions are welcome! Please:
 - **Email:** [niruss.dev](mailto:work.niruss.dev@gmail.com)
 
 ---
+
 **🔒 Use responsibly and for educational purposes only!**
